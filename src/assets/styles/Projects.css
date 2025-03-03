@@ -1,0 +1,93 @@
+#projects {
+  background-color: var(--background-dark);
+  padding-top: 80px;
+  padding-bottom: 60px;
+  color: var(--text-light);
+}
+
+.category-button {
+  cursor: pointer;
+  font-weight: normal;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.category-button.active {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.category-divider {
+  margin: 0 10px;
+  color: var(--text-light);
+}
+
+.category-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.project-card {
+  background-color: #3a3a3a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.project-role {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.project-duration {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.technologies {
+  margin-top: 20px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-item {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: scale(1.1);
+}

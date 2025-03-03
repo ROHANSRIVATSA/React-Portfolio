@@ -1,0 +1,12 @@
+/* Footer Section */
+footer {
+    background-color: #1a1a1a;
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }

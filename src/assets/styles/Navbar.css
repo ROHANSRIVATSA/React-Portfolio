@@ -1,0 +1,79 @@
+/* Navbar Container */
+.navbar {
+  background-color: rgba(26, 26, 26, 0.9);
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: none !important;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  position: absolute;
+  left: 2rem;
+  transition: color 0.2s ease; /* Faster color transition */
+}
+
+/* Centering Navbar Items */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Navbar Menu */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transform: none !important;
+}
+
+/* Navbar Items */
+.nav-item {
+  list-style: none;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease, transform 0.15s ease-in-out; /* Faster transitions */
+}
+
+/* Hover Effect: Change color to blue */
+.nav-link:hover,
+.nav-link:focus {
+  color: #3498db; /* Blue on hover */
+  transform: translateY(-3px); /* Slightly stronger lift effect */
+}
+
+/* Active Link State */
+.nav-link.active {
+  color: #3498db; /* Blue when active */
+  font-weight: normal; /* Normal font weight */
+  transform: none !important; /* Remove any extra transformations */
+}

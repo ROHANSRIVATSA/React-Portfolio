@@ -1,0 +1,14 @@
+/* About Section */
+#about {
+  background-color: var(--background-dark);
+  padding-top: 125px;  /* Adjusted padding to account for navbar height */
+  padding-bottom: 60px;
+  position: relative;  /* Ensures it respects the navbar space */
+  z-index: 1;  /* Ensures the section stays above the navbar */
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}

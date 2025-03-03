@@ -1,0 +1,59 @@
+/* Contact Section */
+.contact-section {
+  background-color: var(--background-dark);
+  padding-top: 30px;  /* This matches the top padding of other sections like Projects */
+  padding-bottom: 60px;  /* Consistent bottom padding for spacing between sections */
+  color: var(--text-light);  /* Ensure text color consistency */
+}
+
+.contact-header {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;  /* Margin to separate header from content */
+}
+
+.contact-window {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 30px; /* Adds spacing from the header */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;  /* Further reduced the gap between items */
+}
+
+.contact-item {
+  background: #333333;
+  padding: 10px;  /* Reduced padding */
+  color: #fff;    /* Ensure text color is consistent */
+  font-size: 1.1rem;
+  border-radius: 8px; /* Optional, for rounded corners */
+  margin: 0; /* Remove any default margin that could cause extra space */
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #61dafb;
+  transition: color 0.3s ease;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .contact-window {
+    padding: 20px;
+  }
+
+  .contact-header {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust margins and paddings for small screen */
+  .contact-item {
+    padding: 10px;
+  }
+}
