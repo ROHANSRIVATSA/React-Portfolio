@@ -80,7 +80,7 @@ const Navbar = () => {
                   className={`nav-link ${activeLink === id ? "active" : ""}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(id, 1000); // Adjust 1500ms for slower scrolling
+                    scrollToSection(id, 1000); // Adjust 1000ms for slower scrolling
                   }}
                 >
                   {id.charAt(0).toUpperCase() + id.slice(1)}
