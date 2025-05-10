@@ -8,12 +8,12 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "GSI-Sol-Support",
+      title: "GSI-Sol",
       category: "professional",
       role: "Junior Developer",
       duration: "Jul 2024 – Dec 2024",
       description:
-        "At MapleLabs, my manager and I got involved in a project that grew significantly due to the success of our work. As more team members joined, I facilitated knowledge transfer by sharing the product knowledge I had acquired. My work in resolving customer issues and improving system performance using C# and ASP.NET was acknowledged by my team and praised by senior managers, both at MapleLabs and on the client side. I was responsible for improving system performance, resolving customer issues, and developing new features with C# and ASP.NET.",
+        "At MapleLabs, my manager and I got involved in a project that grew significantly due to the success of our work. As more team members joined, I facilitated knowledge transfer by sharing the product knowledge I had acquired. My work in resolving customer issues and improving system performance using C# and ASP.NET was acknowledged by my team and praised by senior managers, both at MapleLabs and on the client side.",
       technologies: ["C#", "ASP.NET", "MySQL"],
     },
     {
@@ -23,7 +23,7 @@ const Projects = () => {
       role: "Full Stack Developer",
       duration: "Dec 2023 – Jun 2024",
       description:
-        "As a Full Stack Developer on the NXOS-Sanity project, I worked with Django and Vue.js to develop new features and enhance existing ones, improving the overall user experience. I designed and built RESTful APIs to ensure smooth communication between the frontend and backend. Along with developing new features, I was also responsible for troubleshooting and fixing bugs to keep everything running smoothly. I worked closely with different teams to understand their needs, integrate various systems, and make sure we delivered the features on time. This experience helped me grow my skills in both backend and frontend development while also strengthening my ability to collaborate and solve problems effectively.",
+        "As a Full Stack Developer on the NXOS-Sanity project, I worked with Django and Vue.js to develop new features and enhance existing ones, improving the overall user experience. I designed and built RESTful APIs to ensure smooth communication between the frontend and backend, and collaborated with teams to deliver features on time.",
       technologies: ["Django", "Vue.js", "REST APIs"],
     },
     {
@@ -33,17 +33,17 @@ const Projects = () => {
       role: "Full Stack Web Development Intern",
       duration: "Mar 2023 – Apr 2023",
       description:
-        "During my internship, I worked on developing a website for a cafe. My focus was on designing a simple, easy-to-use interface and setting up a well-structured database to keep things organized. I also documented the process to make future updates easier for the team. It was a short project, but it gave me hands-on experience in building something real based on a client’s needs.",
+        "During my internship, I worked on developing a website for a cafe. I focused on designing a simple, user-friendly interface and setting up a structured database. This gave me hands-on experience building something real based on a client’s needs.",
       technologies: ["HTML", "CSS", "JavaScript", "Databases"],
     },
     {
       id: 4,
       title: "Log Analysis Tool",
-      category: "personal", // Changed category to personal
+      category: "personal",
       role: "Full Stack Developer",
       duration: "Ongoing",
       description:
-        "Currently working on the development of a log analysis tool that processes and analyzes large volumes of system log data. The tool, built with Java Spring Boot for the backend and Vue.js for the frontend, is designed to identify patterns and anomalies in log data, visualize trends, and generate reports. This project focuses on using data analysis techniques to optimize system performance and support troubleshooting efforts by efficiently processing and analyzing data in real-time.",
+        "Currently working on a log analysis tool that processes large volumes of system logs. Built with Java Spring Boot and Vue.js, it identifies anomalies, visualizes trends, and generates performance reports in real-time.",
       technologies: ["Java", "Spring Boot", "Vue.js", "Data Analysis"],
     },
     {
@@ -53,7 +53,7 @@ const Projects = () => {
       role: "Academic Project",
       duration: "Sep 2022 – May 2023",
       description:
-        "I worked on a project exploring Federated Learning to train AI models on medical data without compromising privacy. The goal was to allow hospitals to collaborate securely while ensuring sensitive information remained protected.",
+        "Explored federated learning to train AI models on OCT medical data without compromising privacy. This enabled collaboration across healthcare institutions while maintaining data confidentiality.",
       technologies: ["Python", "TensorFlow", "Federated Learning"],
     },
     {
@@ -63,8 +63,18 @@ const Projects = () => {
       role: "Personal Project",
       duration: "Ongoing",
       description:
-        "This is my personal portfolio, built to showcase my work and skills. I developed it using React and CSS, focusing on a clean design and smooth user experience. It’s an ongoing project where I keep experimenting and improving.",
+        "This is my personal portfolio, built to showcase my work and skills. Built with React and CSS, it features a clean, responsive design and animations using Framer Motion.",
       technologies: ["React", "CSS", "Framer Motion"],
+    },
+    {
+      id: 7,
+      title: "LLM-Powered Decision Support System for Mental Health",
+      category: "personal",
+      role: "Personal Project",
+      duration: "Dec 2024 – Feb 2025",
+      description:
+        "This project explores how large language models can support clinicians in early mental health screening by offering interpretable suggestions. I built a web-based tool that combines GPT-generated summaries with visual explanations like SHAP graphs and attention overlays. The interface aims to make AI insights more accessible to non-technical users.",
+      technologies: ["Python", "FastAPI", "React", "SHAP", "Plotly", "LLMs"],
     },
   ];
 
@@ -81,7 +91,11 @@ const Projects = () => {
           <span
             className={activeCategory === "professional" ? "active-link" : ""}
             onClick={() => setActiveCategory("professional")}
-            style={{ cursor: "pointer", marginRight: "20px", fontWeight: activeCategory === 'professional' ? 'bold' : 'normal' }}
+            style={{
+              cursor: "pointer",
+              marginRight: "20px",
+              fontWeight: activeCategory === "professional" ? "bold" : "normal",
+            }}
           >
             Professional
           </span>
@@ -89,83 +103,45 @@ const Projects = () => {
           <span
             className={activeCategory === "personal" ? "active-link" : ""}
             onClick={() => setActiveCategory("personal")}
-            style={{ cursor: "pointer", marginLeft: "20px", fontWeight: activeCategory === 'personal' ? 'bold' : 'normal' }}
+            style={{
+              cursor: "pointer",
+              marginLeft: "20px",
+              fontWeight: activeCategory === "personal" ? "bold" : "normal",
+            }}
           >
             Personal
           </span>
         </div>
 
-        {/* Professional Projects */}
-        {activeCategory === "professional" ? (
-          <>
-            <div className="category-header">Professional Projects</div>
-            <div className="row">
-              {filteredProjects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  className="col-md-6 mb-4"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="project-card">
-                    <h3>{project.title}</h3>
-                    <p className="project-role">{project.role}</p>
-                    <p className="project-duration">{project.duration}</p>
-                    <p className="project-description">{project.description}</p>
-                    <div className="technologies">
-                      <strong>Technologies:</strong>
-                      <div className="tech-list">
-                        {project.technologies.map((tech, index) => (
-                          <span key={index} className="tech-item">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+        <div className="row">
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              className="col-md-6 mb-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="project-card">
+                <h3>{project.title}</h3>
+                <p className="project-role">{project.role}</p>
+                <p className="project-duration">{project.duration}</p>
+                <p className="project-description">{project.description}</p>
+                <div className="technologies">
+                  <strong>Technologies:</strong>
+                  <div className="tech-list">
+                    {project.technologies.map((tech, index) => (
+                      <span key={index} className="tech-item">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </>
-        ) : null}
-
-        {/* Personal Projects */}
-        {activeCategory === "personal" ? (
-          <>
-            <div className="category-header">Personal Projects</div>
-            <div className="row">
-              {filteredProjects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  className="col-md-6 mb-4"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="project-card">
-                    <h3>{project.title}</h3>
-                    <p className="project-role">{project.role}</p>
-                    <p className="project-duration">{project.duration}</p>
-                    <p className="project-description">{project.description}</p>
-                    <div className="technologies">
-                      <strong>Technologies:</strong>
-                      <div className="tech-list">
-                        {project.technologies.map((tech, index) => (
-                          <span key={index} className="tech-item">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </>
-        ) : null}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

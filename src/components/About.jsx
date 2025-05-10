@@ -19,18 +19,19 @@ const About = () => {
         <h2 className="text-center mb-5">About Me</h2>
         <div className="row">
           <div className="col-md-8 mx-auto text-center">
-            <p className="lead">
-              I’ve spent the past year working as a full-stack developer, and it’s been an exciting ride! I’ve had the chance to work with technologies like <strong>C#</strong>, <strong>ASP.NET</strong>, <strong>Django</strong>, and <strong>Vue.js</strong>, building web applications that solve real problems. From managing databases with <strong>MySQL</strong> to creating smooth, user-friendly interfaces, I’ve learned a lot, and I’m always up for new challenges.
-            </p>
-            <p className="lead">
-              Right now, I’m pursuing a Master’s in Computer Science at <strong>Northeastern University</strong>, diving deeper into <strong>AI</strong> and <strong>Machine Learning</strong>. This is the next step for me because I’ve always been curious about how data and smart systems can help make better decisions and drive innovation. I also got into cloud tech a couple of years ago, and I’ve earned certifications in cloud essentials, architecture, and serverless, which has helped me think about how scalable and secure systems are built.
-            </p>
-            <p className="lead">
-              I love working with teams, whether it's helping new members get started, brainstorming ideas, or collaborating to make sure we deliver quality software. Outside of work, I’m always keeping an eye on the latest <strong>AI</strong> trends or tinkering with new tech just to learn more.
-            </p>
-            <p className="lead">
-              I’m super excited about where this journey is taking me, and I can’t wait to apply my skills in <strong>AI/ML</strong> and <strong>data science</strong> to build something meaningful!
-            </p>
+          <p className="lead">
+            I'm a software engineer and graduate student in Computer Science at Northeastern University, with a background in full-stack development and a growing focus on AI, machine learning, andhuman-computer interaction. Over the past year, I’ve built and maintained backend and frontend systems using Django, Vue.js, C#, and ASP.NET, while collaborating with cross-functional teams and mentoring new developers.
+          </p>
+          <p className="lead">
+            My recent work has been centered around making intelligent systems more explainable and inclusive. I’ve developed a decision-support prototype for mental health screening that uses large language models (LLMs) and visual explanation tools like SHAP and attention overlays to assist clinicians in understanding AI-generated recommendations. I also worked on a federated learning project focused on privacy-preserving AI for medical imaging during my bachelors.
+          </p>
+          <p className="lead">
+            I’m especially interested in building AI systems that adapt to individual differences in background, expertise, and cognitive styles so that technology works for a wider range of people. My goal is to contribute to the development of trustworthy, user-centered sociotechnical systems that blend strong engineering with thoughtful design.
+          </p>
+          <p className="lead">
+            I'm always excited to collaborate on research at the intersection of machine learning, HCI, and I’m looking forward to applying these passions in projects that drive real-world impact.
+          </p>
+
           </div>
         </div>
       </div>
