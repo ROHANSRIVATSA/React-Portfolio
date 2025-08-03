@@ -7,43 +7,43 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "GSI-Sol",
-      category: "professional",
-      role: "Junior Developer",
-      duration: "Jul 2024 – Dec 2024",
-      description:
-        "At MapleLabs, my manager and I got involved in a project that grew significantly due to the success of our work. As more team members joined, I facilitated knowledge transfer by sharing the product knowledge I had acquired. My work in resolving customer issues and improving system performance using C# and ASP.NET was acknowledged by my team and praised by senior managers, both at MapleLabs and on the client side.",
-      technologies: ["C#", "ASP.NET", "MySQL"],
-    },
-    {
-      id: 2,
-      title: "NXOS-Sanity",
-      category: "professional",
+      id: 7,
+      title: "Breast Cancer Classification Web App",
+      category: "personal",
       role: "Full Stack Developer",
-      duration: "Dec 2023 – Jun 2024",
+      duration: "Apr-May 2025",
       description:
-        "As a Full Stack Developer on the NXOS-Sanity project, I worked with Django and Vue.js to develop new features and enhance existing ones, improving the overall user experience. I designed and built RESTful APIs to ensure smooth communication between the frontend and backend, and collaborated with teams to deliver features on time.",
-      technologies: ["Django", "Vue.js", "REST APIs"],
+        "Developed a full-stack breast cancer prediction web app leveraging Logistic Regression (Scikit-learn), Django REST API, and React. Achieved 98.2% test accuracy and enabled real-time binary classification via an intuitive UI.",
+      technologies: ["Python", "Scikit-learn", "Django", "React"],
     },
     {
-      id: 3,
-      title: "Varcons Internship",
-      category: "professional",
-      role: "Full Stack Web Development Intern",
-      duration: "Mar 2023 – Apr 2023",
+      id: 8,
+      title: "Chatbot with Transformer",
+      category: "personal",
+      role: "AI Developer",
+      duration: "Feb 2025 – Mar 2025",
       description:
-        "During my internship, I worked on developing a website for a cafe. I focused on designing a simple, user-friendly interface and setting up a structured database. This gave me hands-on experience building something real based on a client’s needs.",
-      technologies: ["HTML", "CSS", "JavaScript", "Databases"],
+        "Built a context-aware chatbot using Transformer-based seq2seq models trained on multi-turn dialogues. Demonstrated advanced NLP skills and user-intent modeling, applicable to recommendation systems and ad targeting.",
+      technologies: ["Python", "Transformers", "PyTorch", "NLP"],
+    },
+    {
+      id: 9,
+      title: "Time Series Forecasting",
+      category: "personal",
+      role: "ML Engineer",
+      duration: "Jan 2025 – Feb 2025",
+      description:
+        "Engineered a time series forecasting pipeline with LSTM and XGBoost models to predict stock prices, achieving a MAPE of 3.1%, demonstrating strong trend and pattern recognition capabilities.",
+      technologies: ["Python", "LSTM", "XGBoost", "Time Series"],
     },
     {
       id: 4,
       title: "Log Analysis Tool",
       category: "personal",
       role: "Full Stack Developer",
-      duration: "Ongoing",
+      status: "Completed",
       description:
-        "Currently working on a log analysis tool that processes large volumes of system logs. Built with Java Spring Boot and Vue.js, it identifies anomalies, visualizes trends, and generates performance reports in real-time.",
+        "Delivered a comprehensive log analysis tool using Java Spring Boot and Vue.js, capable of processing large-scale system logs, detecting anomalies, visualizing trends, and generating real-time performance reports, enhancing system monitoring efficacy.",
       technologies: ["Java", "Spring Boot", "Vue.js", "Data Analysis"],
     },
     {
@@ -53,7 +53,7 @@ const Projects = () => {
       role: "Academic Project",
       duration: "Sep 2022 – May 2023",
       description:
-        "Explored federated learning to train AI models on OCT medical data without compromising privacy. This enabled collaboration across healthcare institutions while maintaining data confidentiality.",
+        "Explored federated learning techniques to collaboratively train AI models on OCT medical data without compromising patient privacy, enabling secure multi-institutional research.",
       technologies: ["Python", "TensorFlow", "Federated Learning"],
     },
     {
@@ -61,23 +61,46 @@ const Projects = () => {
       title: "Portfolio Website",
       category: "personal",
       role: "Personal Project",
-      duration: "Ongoing",
+      status: "Completed",
       description:
-        "This is my personal portfolio, built to showcase my work and skills. Built with React and CSS, it features a clean, responsive design and animations using Framer Motion.",
+        "Created a personal portfolio using React and CSS, featuring a clean, responsive design with dynamic animations powered by Framer Motion to showcase skills and projects effectively.",
       technologies: ["React", "CSS", "Framer Motion"],
     },
+
+    // Professional projects
     {
-      id: 7,
-      title: "LLM-Powered Decision Support System for Mental Health",
-      category: "personal",
-      role: "Personal Project",
-      duration: "Dec 2024 – Feb 2025",
+      id: 1,
+      title: "GSI-Sol",
+      category: "professional",
+      role: "Junior Developer",
+      duration: "Jul 2024 – Dec 2024",
       description:
-        "This project explores how large language models can support clinicians in early mental health screening by offering interpretable suggestions. I built a web-based tool that combines GPT-generated summaries with visual explanations like SHAP graphs and attention overlays. The interface aims to make AI insights more accessible to non-technical users.",
-      technologies: ["Python", "FastAPI", "React", "SHAP", "Plotly", "LLMs"],
+        "Contributed to maintenance and enhancement of a large-scale enterprise monitoring solution for a confidential client. Diagnosed and resolved over 03 CI pipeline issues by replicating system failures across VDI/VRA environments, improving deployment success rate by ~20%. Authored targeted hotfixes addressing Azure service misconfigurations and collaborated with DevOps to coordinate release delivery via Buddy Drop protocol. Utilized TeamCity to validate nightly builds and JFrog Artifactory for artifact integrity, ensuring release traceability and patch accuracy.",
+      technologies: ["C#", "ASP.NET", "MySQL", "TeamCity", "JFrog"],
+    },
+    {
+      id: 2,
+      title: "NXOS-Sanity",
+      category: "professional",
+      role: "Full Stack Developer",
+      duration: "Dec 2023 – Jun 2024",
+      description:
+        "Designed and implemented scalable frontend-backend integrations for a system validation platform using Django and Vue.js. Delivered 8+ new feature modules and resolved 20+ defects, improving system responsiveness and stability. Developed RESTful APIs to standardize cross-system communication, and collaborated with QA and backend teams to reduce integration failure rates during regression testing by 30%.",
+      technologies: ["Django", "Vue.js", "REST APIs", "PostgreSQL"],
+    },
+    {
+      id: 3,
+      title: "Varcons Internship",
+      category: "professional",
+      role: "Full Stack Web Development Intern",
+      duration: "Mar 2023 – Apr 2023",
+      description:
+        "Developed a responsive React-based website for a local cafe client, featuring dynamic menu rendering, contact forms, and mobile-first UI components. Delivered project 1 week ahead of schedule, aligning with all client visual and functional requirements. Enhanced UX and improved load performance by optimizing component hierarchy and eliminating unnecessary DOM reflows.",
+      technologies: ["HTML", "CSS", "JavaScript", "React"],
     },
   ];
 
+  // Filter projects based on activeCategory
   const filteredProjects =
     activeCategory === "professional"
       ? projects.filter((project) => project.category === "professional")
@@ -126,7 +149,14 @@ const Projects = () => {
               <div className="project-card">
                 <h3>{project.title}</h3>
                 <p className="project-role">{project.role}</p>
-                <p className="project-duration">{project.duration}</p>
+                {project.duration && (
+                  <p className="project-duration">{project.duration}</p>
+                )}
+                {project.status && (
+                  <p className="project-status">
+                    <strong>Status:</strong> {project.status}
+                  </p>
+                )}
                 <p className="project-description">{project.description}</p>
                 <div className="technologies">
                   <strong>Technologies:</strong>

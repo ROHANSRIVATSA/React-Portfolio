@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from "react";
-import "../assets/styles/Navbar.css"; // Import CSS
+import "../assets/styles/Navbar.css";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("home");
 
   const scrollToSection = (id, duration = 1000) => {
     if (id === "home") {
       window.scrollTo({
-        top: 0, // Scroll to the very top for Home
+        top: 0,
         behavior: "smooth",
       });
     } else {
       const element = document.getElementById(id);
       if (element) {
-        const targetPosition = element.offsetTop - 70; // Adjust for navbar height
+        const targetPosition = element.offsetTop - 70;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         let startTime = null;
 
-        // Easing function for smooth scroll
         const ease = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
 
         const scrollAnimation = (currentTime) => {
@@ -35,13 +34,12 @@ const Navbar = () => {
         requestAnimationFrame(scrollAnimation);
       }
     }
-    setActiveLink(id);
   };
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
-      let currentSection = "home"; // Default to home when at the top
+      let currentSection = "home";
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
@@ -68,7 +66,7 @@ const Navbar = () => {
             scrollToSection("home");
           }}
         >
-          Welcome 👋
+          
         </a>
 
         <div className="nav-center">
@@ -80,7 +78,7 @@ const Navbar = () => {
                   className={`nav-link ${activeLink === id ? "active" : ""}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(id, 1000); // Adjust 1000ms for slower scrolling
+                    scrollToSection(id, 1000);
                   }}
                 >
                   {id.charAt(0).toUpperCase() + id.slice(1)}

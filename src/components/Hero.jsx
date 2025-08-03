@@ -1,12 +1,12 @@
+// Hero.jsx
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Particles from "react-tsparticles"; // Correct import for Particles
+import Particles from "react-tsparticles";
 import "../assets/styles/Hero.css";
 
 const Hero = () => {
-  // Add debugging console log to check rendering
   useEffect(() => {
-    console.log("Hero section is being rendered.");
+    console.log("Hero section is rendered.");
   }, []);
 
   const scrollToProjects = () => {
@@ -18,7 +18,6 @@ const Hero = () => {
     }
   };
 
-  // Particle options for background
   const options = {
     particles: {
       number: {
@@ -51,17 +50,25 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero-section">
-      {/* Particle background */}
       <div className="particle-background">
         <Particles options={options} />
       </div>
-      
+
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="hero-content"
-      >
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.5 }}
+  className="hero-content"
+  style={{
+    position: "relative",
+    top: "-15vh", // 👈 moves content up by 10% of viewport height
+    zIndex: 2,
+    maxWidth: "800px",
+    textAlign: "center",
+    padding: "2rem",
+  }}
+>
+
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -69,17 +76,16 @@ const Hero = () => {
         >
           Hi, I'm Rohan A
         </motion.h1>
+
         <motion.p
           className="lead"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          Welcome to my portfolio website. I’m a Software Engineer with a background in full-stack development, 
-          and I’ve always had a strong interest in working with data. My journey has led me to explore AI and Machine Learning, 
-          where I focus on improving coding practices, system performance, and problem-solving. Along the way, I’ve gained 
-          hands-on experience applying data-driven approaches to enhance software solutions and optimize processes.
+          I am an aspiring technology entrepreneur and graduate student driven by a passion for AI, machine learning, and scalable full-stack development. I leverage data-driven innovation and rigorous scientific methods to create solutions that push the boundaries of what's possible, aiming for breakthrough impact in emerging tech landscapes.
         </motion.p>
+
         <div className="cta-buttons">
           <motion.button
             className="btn btn-primary me-2"
@@ -88,9 +94,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
-            onClick={scrollToProjects} // Add onClick handler
+            onClick={scrollToProjects}
           >
-            View My Work
+            Explore My Work
           </motion.button>
         </div>
       </motion.div>
