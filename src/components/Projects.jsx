@@ -8,29 +8,31 @@ const Projects = () => {
   const projects = [
     {
       id: 7,
-      title: "Breast Cancer Classification Web App",
+      title: "Breast Cancer Classification",
       category: "personal",
-      role: "Full Stack Developer",
+      role: "Learner",
       duration: "Apr-May 2025",
       description:
         "Developed a full-stack breast cancer prediction web app leveraging Logistic Regression (Scikit-learn), Django REST API, and React. Achieved 98.2% test accuracy and enabled real-time binary classification via an intuitive UI.",
       technologies: ["Python", "Scikit-learn", "Django", "React"],
+      link: "https://colab.research.google.com/drive/1YFGKKJI5HIk6OZ9yVuDK1Y2l3UswELQF?usp=sharing",
     },
     {
       id: 8,
       title: "Chatbot with Transformer",
       category: "personal",
-      role: "AI Developer",
+      role: "Learner",
       duration: "Feb 2025 – Mar 2025",
       description:
         "Built a context-aware chatbot using Transformer-based seq2seq models trained on multi-turn dialogues. Demonstrated advanced NLP skills and user-intent modeling, applicable to recommendation systems and ad targeting.",
       technologies: ["Python", "Transformers", "PyTorch", "NLP"],
+      link: "https://colab.research.google.com/drive/1_j0UwoIUGZY2Sss4uSIjivwaiQHo25dj?usp=sharing",
     },
     {
       id: 9,
       title: "Time Series Forecasting",
       category: "personal",
-      role: "ML Engineer",
+      role: "Learner",
       duration: "Jan 2025 – Feb 2025",
       description:
         "Engineered a time series forecasting pipeline with LSTM and XGBoost models to predict stock prices, achieving a MAPE of 3.1%, demonstrating strong trend and pattern recognition capabilities.",
@@ -39,7 +41,7 @@ const Projects = () => {
     {
       id: 4,
       title: "Log Analysis Tool",
-      category: "personal",
+      category: "Academic",
       role: "Full Stack Developer",
       status: "Completed",
       description:
@@ -66,8 +68,6 @@ const Projects = () => {
         "Created a personal portfolio using React and CSS, featuring a clean, responsive design with dynamic animations powered by Framer Motion to showcase skills and projects effectively.",
       technologies: ["React", "CSS", "Framer Motion"],
     },
-
-    // Professional projects
     {
       id: 1,
       title: "GSI-Sol",
@@ -100,11 +100,24 @@ const Projects = () => {
     },
   ];
 
-  // Filter projects based on activeCategory
   const filteredProjects =
     activeCategory === "professional"
       ? projects.filter((project) => project.category === "professional")
       : projects.filter((project) => project.category === "personal");
+
+  const buttonStyle = {
+    display: 'inline-block',
+    padding: '10px 20px',
+    backgroundColor: '#007bff',
+    color: 'white',
+    textAlign: 'center',
+    textDecoration: 'none',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    marginBottom: '1rem',
+    fontWeight: 'bold',
+  };
 
   return (
     <section id="projects" className="py-5">
@@ -158,6 +171,16 @@ const Projects = () => {
                   </p>
                 )}
                 <p className="project-description">{project.description}</p>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={buttonStyle}
+                  >
+                    View Project
+                  </a>
+                )}
                 <div className="technologies">
                   <strong>Technologies:</strong>
                   <div className="tech-list">
