@@ -11,7 +11,6 @@ const Projects = () => {
       title: "Breast Cancer Classification",
       category: "personal",
       role: "Learner",
-      duration: "Apr-May 2025",
       description:
         "Developed a full-stack breast cancer prediction web app leveraging Logistic Regression (Scikit-learn), Django REST API, and React. Achieved 98.2% test accuracy and enabled real-time binary classification via an intuitive UI.",
       technologies: ["Python", "Scikit-learn", "Django", "React"],
@@ -22,7 +21,6 @@ const Projects = () => {
       title: "Chatbot with Transformer",
       category: "personal",
       role: "Learner",
-      duration: "Feb 2025 – Mar 2025",
       description:
         "Built a context-aware chatbot using Transformer-based seq2seq models trained on multi-turn dialogues. Demonstrated advanced NLP skills and user-intent modeling, applicable to recommendation systems and ad targeting.",
       technologies: ["Python", "Transformers", "PyTorch", "NLP"],
@@ -33,7 +31,6 @@ const Projects = () => {
       title: "Time Series Forecasting",
       category: "personal",
       role: "Learner",
-      duration: "Jan 2025 – Feb 2025",
       description:
         "Engineered a time series forecasting pipeline with LSTM and XGBoost models to predict stock prices, achieving a MAPE of 3.1%, demonstrating strong trend and pattern recognition capabilities.",
       technologies: ["Python", "LSTM", "XGBoost", "Time Series"],
